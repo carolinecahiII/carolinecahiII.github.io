@@ -1,0 +1,175 @@
+/* background image/room building */
+body {
+	background-image: url("images/empty.png");
+	font-family: monospace;
+	background-color: #ffff;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	/* make my empty room the background image, make background white, show bkgd image once, stick it to the center of the screen */
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#header {
+	text-align: center;
+	margin-top: 43%;
+	transform: translateX(-.1%);
+	/* make sure it resizes w screen */
+}
+
+/* add top navigation and some nice decoration when you hover */
+.topnavi li {
+	padding-left: 150px;
+	/* space out items */
+	width: 100px;
+	display: inline;
+	/* make horizontal */
+	text-align: center;
+	/* should stack nicely on smaller screens/mobile */
+	overflow: hidden;
+}
+
+.topnavi a {
+	text-decoration: none;
+	/* get rid of underline on links */
+}
+
+.page:hover a {
+	background: #6f6fff;
+	/* add some nice rollover decor */
+	color: white;
+}
+
+/* chair style*/
+#chair {
+	height: 20%;
+	position: fixed;
+	bottom: 25%;
+	/* get the chair where i want it */
+	left: 55%;
+	transform: translateX(-50%);
+	/* center the chair horizontally and make sure it resizes w screen */
+	transition: 1s;
+	/* add a smooth transition effect */
+}
+
+#chair:hover {
+	left: calc(55% + 20px);
+	/* move the chair, adds 20 pixels the right of center (See above) */
+	background: #6f6fff;
+	/* change background color on hover */
+	padding: 5px;
+}
+
+/* moving my jquery text around so it appears near the chair */
+.chair-text {
+	position: absolute;
+	bottom: 40px;
+	left: 400px;
+	color: black;
+	font-size: 16px;
+}
+
+#table {
+	height: 25%;
+	position: fixed;
+	bottom: 30%;
+	/* adjust the placement of the table in scene */
+	left: 50%;
+	transform: translateX(-50%);
+	/* center the chair horizontally */
+}
+
+/* phone style */
+#phone {
+	height: 15%;
+	position: fixed;
+	bottom: 55%;
+	/* get the phone where i want it */
+	left: 65%;
+	transform: translateX(-50%);
+	/* center the phone horizontally and make sure it resizes w screen */
+	transition: 1s;
+	/* add a smooth transition effect */
+}
+
+#phone:hover {
+	background: rgb(231, 96, 96);
+	/* change background color on hover */
+	padding: 5px;
+}
+
+.phone-text {
+	position: absolute;
+	bottom: 40px;
+	left: 900px;
+	color: black;
+	font-size: 16px;
+}
+
+/* art/portfolio section style */
+#art {
+	height: 25%;
+	position: fixed;
+	bottom: 55%;
+	/* get the phone where i want it */
+	left: 37%;
+	transform: translateX(-50%);
+	/* center the phone horizontally and make sure it resizes w screen */
+	transition: 1s;
+	/* add a smooth transition effect */
+}
+
+#art:hover {
+	background: rgb(231, 195, 105);
+	/* change background color on hover */
+	padding: 5px;
+}
+
+.art-text {
+	position: absolute;
+	bottom: 580px;
+	left: 90px;
+	color: black;
+	font-size: 16px;
+}
+
+/* record player style */
+#record {
+	height: 16%;
+	position: fixed;
+	bottom: 34.9%;
+	/* get the phone where i want it */
+	left: 34.8%;
+	transform: translateX(-50%);
+	/* center the phone horizontally and make sure it resizes w screen */
+	transition: 1s;
+	/* add a smooth transition effect */
+}
+
+#record:hover {
+	background: #6f6fff;
+	/* change background color on hover */
+	padding: 5px;
+}
+
+.record-text {
+	position: absolute;
+	bottom: 280px;
+	left: 10px;
+	color: black;
+	font-size: 16px;
+}
+#table:hover {
+	background: rgb(231, 96, 96);
+    opacity: 0.9;
+	/* change background color on hover */
+	padding: 5px;
+    transform: translateX(-50%);
+	/* center the phone horizontally and make sure it resizes w screen */
+	transition: 1s;
+	/* add a smooth transition effect */
+}
+.hint{
+	text-align: center;
+}

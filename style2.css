@@ -1,0 +1,102 @@
+body {
+	font-family: monospace;
+	background-color: #ffff;
+}
+
+/* add top navigation and some nice decoration when you hover */
+.topnavi li {
+	padding-left: 150px;
+	/* space out items */
+	width: 100px;
+	display: inline;
+	/* make horizontal */
+	text-align: center;
+	/* should stack nicely on smaller screens/mobile */
+	overflow: hidden;
+}
+
+.topnavi a {
+	text-decoration: none;
+	/* get rid of underline on links */
+}
+
+.page:hover a {
+	background: #6f6fff;
+	/* add some nice rollover decor */
+	color: white;
+}
+
+/* begin resume style */
+.column {
+	float: left;
+	width: 30.33%;
+	margin-left: 10px;
+
+}
+
+.column li {
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+	}
+}
+
+#phone {
+	height: 300px;
+	margin-left: 20%;
+	padding-top: 100px;
+	/* change background color on hover */
+}
+
+hr {
+    border: none;
+    border-top: 4px dotted #6f6fff;
+    padding:10px;
+  }
+ 
+  /* a few aesthetic fixes I had as inline css, moved to classes */
+.art-style{
+	margin-top:5%;height:200px;margin-left: 10%;text-align: center;margin-bottom: 20px;
+}
+.about-header{
+	margin-top:5%; margin-left: 5%;
+}
+.chair-about{
+	margin-top:5%;height:300px;margin-left: 15%;
+}
+.blue{
+	color:#6f6fff;
+}
+.frank{
+	height: 100px; margin-left:35%;
+}
+#writing{
+	margin-right: 20px;
+}
+#row{
+	padding-top:2%;
+}
+.section-header{
+	display: inline-block;border: 3px solid #6f6fff; padding: 30px; border-radius: 20%;text-align: center;margin-bottom:20px;
+}
+.poster{
+	height: 450px; padding-top:20px;
+}
+.screenshot1{
+	height: 350px;
+}
+.screenshot2{
+	height:400px;
+}
+.phone-red{
+	text-decoration: none;color: rgb(231, 96, 96);
+}
+.phone-blue{
+	text-decoration: none;color:#6f6fff;
+}
+.phone-yellow{
+	text-decoration: none;color:goldenrod;
+}

@@ -4,27 +4,31 @@ body {
 }
 
 /* add top navigation and some nice decoration when you hover */
+.topnavi {
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Distribute space evenly around items */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+
+}
+
 .topnavi li {
-	padding-left: 150px;
-	/* space out items */
-	width: 100px;
-	display: inline;
-	/* make horizontal */
-	text-align: center;
-	/* should stack nicely on smaller screens/mobile */
-	overflow: hidden;
+    /* Remove padding-left and width properties */
+    display: inline; /* Keep it, although it's not necessary with flex items */
+    text-align: center; /* Center text inside each link */
 }
 
 .topnavi a {
-	text-decoration: none;
-	/* get rid of underline on links */
+    text-decoration: none; /* Remove underline from links */
+    color: #4a4aff; /* Change link color to white for better contrast with the background */
+    padding: 10px; /* Add some padding for a larger clickable area */
 }
 
 .page:hover a {
-	background: #6f6fff;
-	/* add some nice rollover decor */
-	color: white;
+    color: #4a4aff;
 }
+
 
 /* begin resume style */
 .column {
@@ -42,6 +46,11 @@ body {
 	.column {
 		width: 100%;
 	}
+}
+@media screen and (max-width: 600px) {
+    .topnavi li {
+        width: 100%; /* Make each link full width on smaller screens */
+    }
 }
 
 #phone {
@@ -99,4 +108,92 @@ hr {
 }
 .phone-yellow{
 	text-decoration: none;color:goldenrod;
+}
+
+  /* portfolio */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Grid item */
+.grid-item {
+    background-color: #f0edfb;
+    border: 2px solid #6f6fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-item h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.grid-item a {
+    display: inline-block;
+    border: 3px solid #6f6fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #6f6fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.grid-item a:hover {
+    background-color: #6f6fff;
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+.project-details-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #6f6fff;
+    border-radius: 10px;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns of equal width */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+.project-rectangle {
+    background-color: #f9f9f9; /* Light background for the rectangles */
+    border: 2px solid #6f6fff; /* Border color matching your theme */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px; /* Padding inside rectangles */
+    text-align: center; /* Center the text inside rectangles */
+	
+}
+.project-rectangle ul{
+	list-style-type: disc;
+	text-align: left;
+}
+
+.project-rectangle a{
+	background-color: rgb(231, 195, 105);;
+    color: #6f6fff;
+	padding: 10px;
+	border-radius: 80px;
+	
+}
+.project-rectangle a:hover {
+    background-color:#6f6fff; 
+    color: rgb(231, 195, 105);
+}
+
+
+@media screen and (max-width: 600px) {
+    .project-grid {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0 10px; /* Padding on the sides on smaller screens */
+    }
 }

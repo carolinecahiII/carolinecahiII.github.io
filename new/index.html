@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <ul class="topnavi heavy-text">
+        <li class="page"><a href="index.html">     home    </a></li>
+        <li class="page"><a href="resume.html">    resume    </a></li>
+        <li class="page"><a href="about.html">    about    </a></li>
+        <li class="page"><a href="portfolio.html">    portfolio    </a></li>
+        <li class="page"><a href="contact.html">    contact    </a></li>
+    </ul>
+    <div class="main-wrapper">
+    <h1 class="mega-text" id="header">caroline cahill</h1>
+    <p id="bottom" class="hint"><small>hint: mouse over things in my room to learn more!</small></p>
+    <br>
+    <br>
+    <p id="bottom2" class="hint"><small>all images by c. cahill, copyright 2023</small></p>
+    <a href="about.html"><img id="chair" src="images/chair.png" alt="chair"></a>
+    <a href="resume.html"><img id="table" src="images/table-ani.gif" alt="table"></a>
+    <a href="contact.html"><img id="phone" src="images/phone.png" alt="phone"></a>
+    <a href="portfolio.html"><img id="art" src="images/art3.png" alt="art"></a>
+    <a href="favorites.html"><img id="record" src="images/record.gif" alt="record"></a>
+
+    <script>
+            $(document).ready(function() {
+                // Get current page URL
+                var currentPage = window.location.pathname.split('/').pop();
+
+                // Loop through topnavi links
+                $('.topnavi a').each(function() {
+                    var linkPage = this.href.split('/').pop();
+
+                    if (linkPage === currentPage) {
+                        // Add 'active' class to the parent li of the matching link
+                        $(this).parent('li').addClass('active');
+                    }
+                });
+            });
+</script>
+
+    </script>
+     </div>
+    
+</body>
+</html>

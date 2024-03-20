@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>portfolio</title>
+      <link rel="stylesheet" type="text/css" href="style2.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+<body>
+   <ul class="topnavi heavy-text">
+      <li class="page"><a href="index.html">     home    </a></li>
+      <li class="page"><a href="resume.html">    resume    </a></li>
+      <li class="page"><a href="about.html">    about    </a></li>
+      <li class="page"><a href="portfolio.html">    portfolio    </a></li>
+      <li class="page"><a href="contact.html">    contact    </a></li>
+  </ul>
+  <a href="index.html" class="back-button">back home!</a>
+     <div class="row" style="padding-top:5%;">
+        <div class="column">
+            <img style="height:300px" src="images/record.gif" alt="record player">
+        </div>
+        <div class="column">
+            <h1>what i'm reading:</h1> 
+            <p><small>pssst! you made it to the easter egg page :)</small></p>
+            <ol>
+               <li><em>either/or</em> by elif batuman</li>
+               <li><em>gamer trouble</em> by amanda phillips</li>
+               <li><em>gathering moss</em> by robin wall kimmerer</li>
+            </ol>
+            <h1>what i'm listening to:</h1> 
+             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EposvkDhczx5U?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+             <h1>what i'm playing:</h1> 
+            <ol>
+                <li><em>baldur's gate 3</em> by larian studios</li>
+                <li><em>yes your grace</em> by brave at night</li>
+                <li><em>disco elysium</em> by za/um studios</li>
+                <li><em>breath of the wild</em> from nintendo (yes, in 2024. i didn't get a switch until this year!)</li>
+             </ol>
+             <p>got a recomendation for me? <a href="contact.html">drop me a line.</a></p>
+        </div>
+        
+    </div>
+    <script>
+      $(document).ready(function() {
+          // Get current page URL
+          var currentPage = window.location.pathname.split('/').pop();
+
+          // Loop through topnavi links
+          $('.topnavi a').each(function() {
+              var linkPage = this.href.split('/').pop();
+
+              if (linkPage === currentPage) {
+                  // Add 'active' class to the parent li of the matching link
+                  $(this).parent('li').addClass('active');
+              }
+          });
+      });
+</script>   
+    </body>
+    </html>
+     
+     

@@ -1,0 +1,342 @@
+/* Define okine Light */
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-Black.otf') format('truetype');
+    font-weight: 200; /* Bold weight */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-BoldOutline.otf') format('truetype');
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+}
+/* Define okine Regular */
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-Regular.otf') format('truetype');
+    font-weight: 500; /* Regular weight */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-Black.otf') format('truetype');
+    font-weight: 600; /* Light weight */
+    font-style: normal;
+}
+/* Define okine Bold */
+@font-face {
+    font-family: 'okine';
+    src: url('okine/okineDEMO-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.medium-text {
+    font-weight: 500;
+}
+
+.heavy-text {
+    font-weight: 700; 
+}
+.skeleton-text {
+    font-weight: 200; 
+}
+.mega-text{
+    font-weight: 600;
+}
+
+body {
+	font-family: 'okine', Helvetica;
+	background-color: #ffff;
+}
+.back-button {
+    display: inline-block;
+    padding: 5px 10px; /* Adjust padding as needed */
+    color: #4a4aff; /* Text color */
+    text-decoration: none; /* Remove underline from link */
+    position: relative; /* Needed for the positioning of the pseudo-element */
+    line-height: 20px; /* Line height to vertically center the text and arrow */
+}
+
+.back-button::before {
+    content: '←'; /* Using a Unicode arrow character */
+    display: inline-block;
+    margin-right: 5px; /* Space between the arrow and the text */
+}
+
+
+/* add top navigation and some nice decoration when you hover */
+.topnavi {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #000; /* Shared bottom line */
+    position: relative; /* Needed for the positioning of the pseudo-element */
+}
+
+.topnavi::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 15px;
+    height: 2px;
+    background-color: #FFF;
+}
+
+.topnavi::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    background-color: #FFF;
+}
+
+
+
+.topnavi li {
+    text-align: center;
+    border: 2px solid #000;
+    border-bottom: none; /* Remove bottom border for individual tabs */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    background-color: #FFF; /* Tab background */
+    position: relative; /* Ensure that the z-index is applied correctly */
+    padding-left: 40px;
+    padding-right:40px;
+}
+
+.topnavi a {
+    text-decoration: none;
+    color: #4a4aff;
+    padding: 10px;
+    display: block;
+}
+
+.main-wrapper {
+    border: 2px solid #000;
+    border-top: none;
+    border-radius: 25px 25px 25px 25px;
+    padding: 20px;
+    margin-top: -2px; /* Adjust based on your actual topnavi bottom line */
+    min-height: calc(100vh - 50px); /* Adjust this value based on the actual height of your topnavi */
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+/* Hover and Active States */
+.topnavi li:hover, .topnavi li.active {
+    margin-bottom: -2px; /* Overlap the shared bottom line */
+    background-color: #EFEFEF; /* Lighter background for active/hovered tabs */
+    border-bottom: 2px solid #FFF; /* Simulate the bottom border disappearing by making it the same color as the tab's background */
+    z-index: 1; /* Ensure hovered or active tab overlaps the shared bottom line */
+}
+
+.page:hover a {
+    color: #4a4aff;
+}
+
+
+/* begin resume style */
+.column {
+	float: left;
+	width: 30.33%;
+	margin-left: 10px;
+
+}
+
+.column li {
+	padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 600px) {
+    .topnavi li {
+        width: 100%; /* Make each link full width on smaller screens */
+    }
+}
+
+#phone {
+	height: 300px;
+	margin-left: 20%;
+	padding-top: 100px;
+	/* change background color on hover */
+}
+
+hr {
+    border: none;
+    border-top: 4px dotted #6f6fff;
+    padding:10px;
+  }
+ 
+  /* a few aesthetic fixes I had as inline css, moved to classes */
+.art-style{
+	margin-top:5%;height:200px;margin-left: 10%;text-align: center;margin-bottom: 20px;
+}
+.about-header{
+	margin-top:5%; margin-left: 5%;
+}
+.chair-about{
+	margin-top:5%;height:300px;margin-left: 15%;
+}
+.blue{
+	color:#6f6fff;
+}
+.frank{
+	height: 100px; margin-left:35%;
+}
+#writing{
+	margin-right: 20px;
+}
+#row{
+	padding-top:2%;
+}
+.section-header{
+	display: inline-block;border: 3px solid #6f6fff; padding: 30px; border-radius: 20%;text-align: center;margin-bottom:20px;
+}
+.poster{
+	height: 450px; padding-top:20px;
+}
+.screenshot1{
+	height: 350px;
+}
+.screenshot2{
+	height:400px;
+}
+.phone-red{
+	text-decoration: none;color: rgb(231, 96, 96);
+}
+.phone-blue{
+	text-decoration: none;color:#6f6fff;
+}
+.phone-yellow{
+	text-decoration: none;color:goldenrod;
+}
+
+  /* portfolio */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+#port-title{
+    text-align: center;
+}
+
+/* Grid item */
+.grid-item {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+.foldericon{
+    height:40px;
+}
+
+.grid-item h2 {
+    margin: 0;
+    padding: 10px 0;
+}
+.project-link{
+    font-size:larger;
+}
+.grid-item a {
+    display: inline-block;
+    border: 3px solid rgb(231, 96, 96);
+    background-color: #f7d2d2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(231, 96, 96);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.grid-item a:hover {
+    background-color:white;
+    color: rgb(231, 96, 96);
+}
+
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+.project-details-container {
+    margin-top: 20px;
+    padding: 20px;
+   
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns of equal width */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px;
+}
+
+.project-rectangle {
+    background-color: #f9f9f9; /* Light background for the rectangles */
+    border: 2px solid #6f6fff; /* Border color matching your theme */
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px; /* Padding inside rectangles */
+    text-align: center; /* Center the text inside rectangles */
+	
+}
+.project-rectangle ul{
+	list-style-type: disc;
+	text-align: left;
+}
+
+.project-rectangle a{
+    background-color:white;
+    border: 3px solid rgb(231, 96, 96);
+    color: rgb(231, 96, 96);
+	padding: 10px;
+	border-radius: 80px;
+	
+}
+.project-rectangle a:hover {
+    border: 3px solid rgb(231, 96, 96);
+    background-color: #f7d2d2;
+}
+
+
+@media screen and (max-width: 600px) {
+    .project-grid {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0 10px; /* Padding on the sides on smaller screens */
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnavi {
+        flex-direction: column; /* Stack the navigation items vertically */
+        align-items: center; /* Center-align the items if desired */
+        padding-top:50px;
+    }
+
+    .topnavi li {
+        width: 100%; /* Each navigation item takes full width */
+        padding: 8px; /* Add some padding for touch targets, adjust as needed */
+    }
+
+    .topnavi a {
+        font-size: 14px; /* Adjusted font size */
+        white-space: normal; /* Allow text to wrap */
+        text-align: center;
+    }
+
+}

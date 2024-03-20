@@ -1,175 +1,232 @@
-/* background image/room building */
+/* Background image and room building styling */
 body {
-	background-image: url("images/empty.png");
-	font-family: monospace;
-	background-color: #ffff;
-	background-size: 70%;
-	background-repeat: no-repeat;
-	/* make my empty room the background image, make background white, show bkgd image once, stick it to the center of the screen */
-	background-attachment: fixed;
-	background-position: center;
+    background-image: url("images/empty.png");
+    font-family: monospace;
+    background-color: #ffff;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-#header {
-	text-align: center;
-	margin-top: 43%;
-	transform: translateX(-.1%);
-	/* make sure it resizes w screen */
+#header, #bottom, #bottom2 {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
 }
 
-/* add top navigation and some nice decoration when you hover */
+#header { top: 88%; }
+#bottom { top: 95%; }
+#bottom2 { top: 98%; }
+
+/* Top navigation styling */
+.topnavi {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .topnavi li {
-	padding-left: 150px;
-	/* space out items */
-	width: 100px;
-	display: inline;
-	/* make horizontal */
-	text-align: center;
-	/* should stack nicely on smaller screens/mobile */
-	overflow: hidden;
+    text-align: center;
 }
 
 .topnavi a {
-	text-decoration: none;
-	/* get rid of underline on links */
+    text-decoration: none;
+    color: #4a4aff;
+    padding: 10px;
 }
 
 .page:hover a {
-	background: #6f6fff;
-	/* add some nice rollover decor */
-	color: white;
+    color: #4a4aff;
 }
 
-/* chair style*/
+/* Resume and other sections style */
+.column {
+    float: left;
+    width: 30.33%;
+    margin-left: 10px;
+}
+
+.column li {
+    padding-top: 10px;
+}
+
+/* Interactive elements styling */
+#chair, #phone, #art, #record, #table {
+    position: fixed;
+    transition: 1s;
+}
+
 #chair {
-	height: 20%;
-	position: fixed;
-	bottom: 25%;
-	/* get the chair where i want it */
-	left: 55%;
-	transform: translateX(-50%);
-	/* center the chair horizontally and make sure it resizes w screen */
-	transition: 1s;
-	/* add a smooth transition effect */
+    height: 20%;
+    bottom: 25%;
+    left: 55%;
+    transform: translateX(-50%);
 }
 
 #chair:hover {
-	left: calc(55% + 20px);
-	/* move the chair, adds 20 pixels the right of center (See above) */
-	background: #6f6fff;
-	/* change background color on hover */
-	padding: 5px;
-}
-
-/* moving my jquery text around so it appears near the chair */
-.chair-text {
-	position: absolute;
-	bottom: 40px;
-	left: 400px;
-	color: black;
-	font-size: 16px;
+    left: calc(55% + 20px);
+    background: #6f6fff;
+    padding: 5px;
 }
 
 #table {
-	height: 25%;
-	position: fixed;
-	bottom: 30%;
-	/* adjust the placement of the table in scene */
-	left: 50%;
-	transform: translateX(-50%);
-	/* center the chair horizontally */
+    height: 25%;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* phone style */
+#table:hover {
+    background: rgb(231, 96, 96);
+    opacity: 0.9;
+    padding: 5px;
+}
+
 #phone {
-	height: 15%;
-	position: fixed;
-	bottom: 55%;
-	/* get the phone where i want it */
-	left: 65%;
-	transform: translateX(-50%);
-	/* center the phone horizontally and make sure it resizes w screen */
-	transition: 1s;
-	/* add a smooth transition effect */
+    height: 15%;
+    bottom: 55%;
+    left: 65%;
+    transform: translateX(-50%);
 }
 
 #phone:hover {
-	background: rgb(231, 96, 96);
-	/* change background color on hover */
-	padding: 5px;
+    background: rgb(231, 96, 96);
+    padding: 5px;
 }
 
-.phone-text {
-	position: absolute;
-	bottom: 40px;
-	left: 900px;
-	color: black;
-	font-size: 16px;
-}
-
-/* art/portfolio section style */
 #art {
-	height: 25%;
-	position: fixed;
-	bottom: 55%;
-	/* get the phone where i want it */
-	left: 37%;
-	transform: translateX(-50%);
-	/* center the phone horizontally and make sure it resizes w screen */
-	transition: 1s;
-	/* add a smooth transition effect */
+    height: 25%;
+    bottom: 55%;
+    left: 37%;
+    transform: translateX(-50%);
 }
 
 #art:hover {
-	background: rgb(231, 195, 105);
-	/* change background color on hover */
-	padding: 5px;
+    background: rgb(231, 195, 105);
+    padding: 5px;
 }
 
-.art-text {
-	position: absolute;
-	bottom: 580px;
-	left: 90px;
-	color: black;
-	font-size: 16px;
-}
-
-/* record player style */
 #record {
-	height: 16%;
-	position: fixed;
-	bottom: 34.9%;
-	/* get the phone where i want it */
-	left: 34.8%;
-	transform: translateX(-50%);
-	/* center the phone horizontally and make sure it resizes w screen */
-	transition: 1s;
-	/* add a smooth transition effect */
+    height: 16%;
+    bottom: 34.9%;
+    left: 34.8%;
+    transform: translateX(-50%);
 }
 
 #record:hover {
-	background: #6f6fff;
-	/* change background color on hover */
-	padding: 5px;
+    background: #6f6fff;
+    padding: 5px;
+}
+
+/* Text styles near interactive elements */
+.chair-text, .phone-text, .art-text, .record-text {
+    position: absolute;
+    color: black;
+    font-size: 16px;
+}
+
+.chair-text {
+    bottom: 40px;
+    left: 400px;
+}
+
+.phone-text {
+    bottom: 40px;
+    left: 900px;
+}
+
+.art-text {
+    bottom: 580px;
+    left: 90px;
 }
 
 .record-text {
-	position: absolute;
-	bottom: 280px;
-	left: 10px;
-	color: black;
-	font-size: 16px;
+    bottom: 280px;
+    left: 10px;
 }
-#table:hover {
-	background: rgb(231, 96, 96);
-    opacity: 0.9;
-	/* change background color on hover */
-	padding: 5px;
-    transform: translateX(-50%);
-	/* center the phone horizontally and make sure it resizes w screen */
-	transition: 1s;
-	/* add a smooth transition effect */
+
+/* Media Queries for responsive adjustments */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    .topnavi li {
+        width: 100%;
+    }
 }
-.hint{
-	text-align: center;
+
+@media screen and (max-width: 1024px), screen and (max-width: 768px), screen and (max-width: 480px) {
+    body {
+		background-image: url("images/ful.png");
+        background-size: 50%; /* or specific dimensions */
+        background-repeat: no-repeat;
+        background-position: center top;
+        padding-top: 60px;
+    }
+
+    #chair, #phone, #art, #record, #table {
+        display: none; /* Hide elements on smaller screens */
+    }
+
+    .topnavi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topnavi li, .topnavi a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust scale of interactive elements for various screen sizes */
+    #chair, #phone, #art, #record, #table {
+        transform: scale(var(--scale-factor));
+    }
+
+	@media screen and (max-width: 1024px) {
+        :root {
+            --scale-factor: 0.8; /* Scale down elements for tablets and larger phones */
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        :root {
+            --scale-factor: 0.7; /* Scale down further for smaller tablets and landscape phones */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        :root {
+            --scale-factor: 0.6; /* Scale down for small devices and portrait phones */
+        }
+
+        /* Adjust the background for mobile */
+        body {
+            background-image: url("path/to/your/mobile-background-image.jpg"); /* Use a mobile-friendly background image */
+        }
+
+        /* Hide interactive elements at the smallest breakpoint */
+        #chair, #phone, #art, #record, #table {
+            display: none;
+        }
+
+        /* Stack the top navigation vertically */
+        .topnavi {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .topnavi li, .topnavi a {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
 }

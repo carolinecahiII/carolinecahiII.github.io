@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <ul class="topnavi">
-        <li class="page"><a href="index.html">[ home ]</a></li>
-        <li class="page"><a href="resume.html">[ resume ]</a></li>
-        <li class="page"><a href="about.html">[ about ]</a></li>
-        <li class="page"><a href="portfolio.html">[ portfolio ]</a></li>
-        <li class="page"><a href="contact.html">[ contact ]</a></li>
+    <ul class="topnavi heavy-text">
+        <li class="page"><a href="index.html">     home    </a></li>
+        <li class="page"><a href="resume.html">    resume    </a></li>
+        <li class="page"><a href="about.html">    about    </a></li>
+        <li class="page"><a href="portfolio.html">    portfolio    </a></li>
+        <li class="page"><a href="contact.html">    contact    </a></li>
     </ul>
-
-    <h1 id="header">caroline cahill</h1>
+    <div class="main-wrapper">
+    <h1 class="mega-text" id="header">caroline cahill</h1>
     <p id="bottom" class="hint"><small>hint: mouse over things in my room to learn more!</small></p>
     <br>
     <br>
@@ -26,5 +26,26 @@
     <a href="contact.html"><img id="phone" src="images/phone.png" alt="phone"></a>
     <a href="portfolio.html"><img id="art" src="images/art3.png" alt="art"></a>
     <a href="favorites.html"><img id="record" src="images/record.gif" alt="record"></a>
+
+    <script>
+            $(document).ready(function() {
+                // Get current page URL
+                var currentPage = window.location.pathname.split('/').pop();
+
+                // Loop through topnavi links
+                $('.topnavi a').each(function() {
+                    var linkPage = this.href.split('/').pop();
+
+                    if (linkPage === currentPage) {
+                        // Add 'active' class to the parent li of the matching link
+                        $(this).parent('li').addClass('active');
+                    }
+                });
+            });
+</script>
+
+    </script>
+     </div>
+    
 </body>
 </html>

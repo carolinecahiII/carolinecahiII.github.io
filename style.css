@@ -329,17 +329,5 @@ body {
         #chair, #phone, #art, #record, #table {
             display: none;
         }
-
-        /* Stack the top navigation vertically */
-        .topnavi {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .topnavi li, .topnavi a {
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
     }
 }

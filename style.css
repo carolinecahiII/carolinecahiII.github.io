@@ -276,7 +276,7 @@ body {
 
 @media screen and (max-width: 1024px), screen and (max-width: 768px), screen and (max-width: 480px) {
     body {
-		background-image: url("images/ful.png");
+		background-image: url("images/full.png");
         background-size: 50%; /* or specific dimensions */
         background-repeat: no-repeat;
         background-position: center top;
@@ -285,17 +285,6 @@ body {
 
     #chair, #phone, #art, #record, #table {
         display: none; /* Hide elements on smaller screens */
-    }
-
-    .topnavi {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .topnavi li, .topnavi a {
-        display: block;
-        width: 100%;
-        text-align: center;
     }
 
     /* Adjust scale of interactive elements for various screen sizes */
@@ -322,7 +311,7 @@ body {
 
         /* Adjust the background for mobile */
         body {
-            background-image: url("path/to/your/mobile-background-image.jpg"); /* Use a mobile-friendly background image */
+            background-image: url("full.png");
         }
 
         /* Hide interactive elements at the smallest breakpoint */

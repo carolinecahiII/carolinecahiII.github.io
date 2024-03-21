@@ -3,24 +3,25 @@
    <head>
       <title>resume</title>
       <link rel="stylesheet" type="text/css" href="style2.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    </head>
    <body>
     <!-- top nav -->
-      <ul class="topnavi">
-         <li class="page"><a href="index.html">[ home ]</a></li>
-         <li class="page"><a href="resume.html">[ resume ]</a></li>
-         <li class="page"><a href="about.html">[ about ]</a></li>
-         <li class="page"><a href="portfolio.html">[ portfolio ]</a></li>
-         <li class="page"><a href="contact.html">[ contact ]</a></li>
-        
-      </ul>
+    <ul class="topnavi heavy-text">
+      <li class="page"><a href="index.html">     home    </a></li>
+      <li class="page"><a href="resume.html">    resume    </a></li>
+      <li class="page"><a href="about.html">    about    </a></li>
+      <li class="page"><a href="portfolio.html">    portfolio    </a></li>
+      <li class="page"><a href="contact.html">    contact    </a></li>
+  </ul>
+  <a href="index.html" class="back-button">back home!</a>
       <br>
       <br>
-      <h1>caroline cahill</h1>
+      <h1 class="light-text">caroline cahill</h1>
       <!-- begin resume -->
       <div class="row">
          <div class="column">
-            <h2>education</h2>
+            <h2 class="mega-text">education</h2>
             <br>
             <h3>trinity college, dublin</h3>
             <h4>m. sc. interactive digital media | 2024</h4>
@@ -42,7 +43,7 @@
                 <li>business ethics</li></ul>
          </div>
          <div class="column">
-            <h2>experience</h2>
+            <h2 class="mega-text">experience</h2>
             <br>
             <h3>brown university</h3>
             <h4>senior library technologist | 2022 - present</h4>
@@ -74,7 +75,7 @@
             </ul>
             </div>
          <div class="column">
-            <h2>skills</h2>
+            <h2 class="mega-text">skills</h2>
             <br>
             <br>
             <ul>
@@ -95,5 +96,21 @@
             </ul>
          </div>
        </div>
+       <script>
+         $(document).ready(function() {
+             // Get current page URL
+             var currentPage = window.location.pathname.split('/').pop();
+
+             // Loop through topnavi links
+             $('.topnavi a').each(function() {
+                 var linkPage = this.href.split('/').pop();
+
+                 if (linkPage === currentPage) {
+                     // Add 'active' class to the parent li of the matching link
+                     $(this).parent('li').addClass('active');
+                 }
+             });
+         });
+</script>   
    </body>
 </html>

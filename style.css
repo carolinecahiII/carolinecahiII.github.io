@@ -1,7 +1,69 @@
-/* Background image and room building styling */
+/* Define okine Light */
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-Black.otf') format('truetype');
+    font-weight: 200; /* Bold weight */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-BoldOutline.otf') format('truetype');
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+}
+/* Define okine Regular */
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-Regular.otf') format('truetype');
+    font-weight: 500; /* Regular weight */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'okine';
+    src: url('okine/MADEOkineSansPERSONALUSE-Black.otf') format('truetype');
+    font-weight: 600; /* Light weight */
+    font-style: normal;
+}
+/* Define okine Bold */
+@font-face {
+    font-family: 'okine';
+    src: url('okine/okineDEMO-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold weight */
+    font-style: normal;
+}
+
+.light-text {
+    font-weight: 300;
+}
+
+.medium-text {
+    font-weight: 500;
+}
+
+.heavy-text {
+    font-weight: 700; 
+}
+.skeleton-text {
+    font-weight: 200; 
+}
+.mega-text{
+    font-weight: 600;
+}
+
 body {
     background-image: url("images/empty.png");
-    font-family: monospace;
+    font-family: 'okine', sans-serif;
+    background-color: #ffff;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+body {
+    background-image: url("images/empty.png");
+    font-family: 'okine', sans-serif;
     background-color: #ffff;
     background-size: 70%;
     background-repeat: no-repeat;
@@ -23,21 +85,72 @@ body {
 
 /* Top navigation styling */
 .topnavi {
+    height: 50px;
     display: flex;
     justify-content: space-around;
     list-style: none;
     padding: 0;
     margin: 0;
+    border-bottom: 2px solid #000; /* Shared bottom line */
+    position: relative; /* Needed for the positioning of the pseudo-element */
 }
+
+.topnavi::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 15px;
+    height: 2px;
+    background-color: #FFF;
+}
+
+.topnavi::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    background-color: #FFF;
+}
+
+
 
 .topnavi li {
     text-align: center;
+    border: 2px solid #000;
+    border-bottom: none; /* Remove bottom border for individual tabs */
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    background-color: #FFF; /* Tab background */
+    position: relative; /* Ensure that the z-index is applied correctly */
+    padding-left: 40px;
+    padding-right:40px;
 }
 
 .topnavi a {
     text-decoration: none;
     color: #4a4aff;
     padding: 10px;
+    display: block;
+}
+
+.main-wrapper {
+    border: 2px solid #000;
+    border-top: none;
+    border-radius: 25px 25px 25px 25px;
+    padding: 20px;
+    margin-top: -2px; /* Adjust based on your actual topnavi bottom line */
+    min-height: calc(100vh - 50px); /* Adjust this value based on the actual height of your topnavi */
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
+}
+
+/* Hover and Active States */
+.topnavi li:hover, .topnavi li.active {
+    margin-bottom: -2px; /* Overlap the shared bottom line */
+    background-color: #EFEFEF; /* Lighter background for active/hovered tabs */
+    border-bottom: 2px solid #FFF; /* Simulate the bottom border disappearing by making it the same color as the tab's background */
+    z-index: 1; /* Ensure hovered or active tab overlaps the shared bottom line */
 }
 
 .page:hover a {

@@ -8,21 +8,24 @@ document.addEventListener("DOMContentLoaded", function() {
             var projectId = this.getAttribute('href');
             var detailsContainer = document.getElementById('projectDetails');
 
-            // Check if the project details are already visible
-            if (detailsContainer.innerHTML !== '' && this.textContent.includes('Close')) {
-                // If visible, hide the details and change the button text to "Learn More"
-                detailsContainer.innerHTML = '';
-                this.textContent = this.textContent.replace('Close', 'Learn More');
-            } else {
-                // If not visible, load and show the details, and change the button text to "Close"
+            // Toggle between + and - based on the current content
+            if (this.textContent.trim() === '+') {
+                // If +, change to -, load the content, and show the details
+                this.textContent = '−'; // Note: This is a minus sign, not a hyphen
                 var projectContent = getProjectContent(projectId);
                 detailsContainer.innerHTML = projectContent;
-                projectLinks.forEach(function(otherLink) {
-                    // Reset other links to "Learn More"
-                    otherLink.textContent = otherLink.textContent.replace('Close', 'Learn More');
-                });
-                this.textContent = this.textContent.replace('Learn More', 'Close');
+            } else {
+                // If -, change to + and hide the details
+                this.textContent = '+';
+                detailsContainer.innerHTML = '';
             }
+
+            // Reset other links to "+", except for the current one
+            projectLinks.forEach(function(otherLink) {
+                if (otherLink !== link) {
+                    otherLink.textContent = '+';
+                }
+            });
         });
     });
 

@@ -93,9 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
                    </div>        
             </div>
         `,
-        "#writing": `
+        "#game": `
                 <div class="project-grid">
-                  
+                <div class="project-rectangle">
+                <h3>odysseus</h3>
+                <p>choose-your-own-adventure game set during an Scott's expedition in antarctica, 1912. built in twine with html, css and js.</p>
+                <embed src="https://www.scss.tcd.ie/~cahillc2/cyoa/odysseus.html" style="width:500px; height: 300px;">
                 </div>
             `,
             "#wordpress": `

@@ -3,50 +3,73 @@
       <head>
           <title>Portfolio</title>
           <link rel="stylesheet" type="text/css" href="style2.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
           <script src="details.js"></script>
       </head>
       <body>
-          <ul class="topnavi">
-              <li class="page"><a href="index.html">[ home ]</a></li>
-              <li class="page"><a href="resume.html">[ resume ]</a></li>
-              <li class="page"><a href="about.html">[ about ]</a></li>
-              <li class="page"><a href="portfolio.html">[ portfolio ]</a></li>
-              <li class="page"><a href="contact.html">[ contact ]</a></li>
-          </ul>
+        <ul class="topnavi heavy-text">
+            <li class="page"><a href="index.html">     home    </a></li>
+            <li class="page"><a href="resume.html">    resume    </a></li>
+            <li class="page"><a href="about.html">    about    </a></li>
+            <li class="page"><a href="portfolio.html">    portfolio    </a></li>
+            <li class="page"><a href="contact.html">    contact    </a></li>
+        </ul>
+        <a href="index.html" class="back-button">back home!</a>
       
-          <h1>Portfolio</h1>
-      
+          <h1 class="mega-text" id="port-title">portfolio</h1>
+            
           <div class="grid-container">
            
               <div class="grid-item">
-               <h2>3D Modeling</h2>
-               <a href="#modeling" class="project-link">Learn More</a>
+                <img style="height:50px;"src="images/polygon.png">
+               <h2 class="medium-text">3D modeling</h2>
+               <a href="#modeling" class="project-link">+</a>
            </div>
            <div class="grid-item">
-               <h2>Web Development</h2>
-               <a href="#webdev" class="project-link">Learn More</a>
+            <img style="height:50px;"src="images/web.png">
+               <h2 class="medium-text">web development</h2>
+               <a href="#webdev" class="project-link">+</a>
            </div>
            <div class="grid-item">
-               <h2>Graphic Design</h2>
-               <a href="#graphicdesign" class="project-link">Learn More</a>
+            <img style="height:50px;"src="images/gd.svg">
+               <h2 class="medium-text">graphic design</h2>
+               <a href="#graphicdesign" class="project-link">+</a>
            </div>
            <div class="grid-item">
-            <h2>Technical Writing Samples</h2>
-            <a href="#writing" class="project-link">Learn More</a>
+            <img style="height:50px;"src="images/doc.png">
+            <h2 class="medium-text">technical writing samples</h2>
+            <a href="#writing" class="project-link">+</a>
         </div>
         <div class="grid-item">
-            <h2>WordPress Development</h2>
-            <a href="#wordpress" class="project-link">Learn More</a>
+            <img style="height:50px;"src="images/wp.png">
+            <h2 class="medium-text">wordpress development</h2>
+            <a href="#wordpress" class="project-link">+</a>
         </div>
         <div class="grid-item">
-            <h2>Academic Writing</h2>
-            <a href="#academic" class="project-link">Learn More</a>
+            <img style="height:50px;"src="images/doc.png">
+            <h2 class="medium-text">academic writing</h2>
+            <a href="#academic" class="project-link">+</a>
         </div>
           </div>
       
           <!-- Project Details will be loaded here -->
           <div id="projectDetails" class="project-details-container"></div>
-      
+          <script>
+            $(document).ready(function() {
+                // Get current page URL
+                var currentPage = window.location.pathname.split('/').pop();
+
+                // Loop through topnavi links
+                $('.topnavi a').each(function() {
+                    var linkPage = this.href.split('/').pop();
+
+                    if (linkPage === currentPage) {
+                        // Add 'active' class to the parent li of the matching link
+                        $(this).parent('li').addClass('active');
+                    }
+                });
+            });
+</script>   
       </body>
       </html>
       

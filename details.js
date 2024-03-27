@@ -61,6 +61,13 @@ document.addEventListener("DOMContentLoaded", function() {
              <br><br><br>
           </div>
              </div>
+             <div class="project-grid">
+            <div class="project-rectangle">
+            <h3>mise.</h3>
+                <p>a desktop blogging source specifically for home cooks, inspired by the developing food/graphic design relationship.</p>
+                <img style="width: 80%; margin-top: 10%;" src="images/mise.jpeg"><br>
+            </div>
+            </div>
         `,
         "#graphicdesign": `
             <div>

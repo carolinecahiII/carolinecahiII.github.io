@@ -44,10 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
             <div>
             <div class="project-grid">
             <div class="project-rectangle">
-                <h3>mix.tape</h3>
-                <p>a social platform designed for sharing and reviewing albums, inspired by letterboxd. <br>made with html/css, python, and a django database.</p>
-                <iframe width="560" height="515" src="https://www.youtube.com/embed/heenChG4ZoI" title="Cahill CS108 Final Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-             </div>
+             <h3>mise.</h3>
+                <p>a desktop blogging source specifically for home cooks, inspired by the developing food/graphic design relationship.</p>
+                <img style="width: 80%; margin-top: 10%;" src="images/mise.jpeg"><br>
+            </div>
+          
              <div class="project-rectangle">
                 <h3>crushd</h3>
                 <p>an app for sharing, logging, and recommending natural wine</p>
@@ -63,10 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
              </div>
              <div class="project-grid">
             <div class="project-rectangle">
-            <h3>mise.</h3>
-                <p>a desktop blogging source specifically for home cooks, inspired by the developing food/graphic design relationship.</p>
-                <img style="width: 80%; margin-top: 10%;" src="images/mise.jpeg"><br>
-            </div>
+              <div class="project-rectangle">
+                <h3>mix.tape</h3>
+                <p>a social platform designed for sharing and reviewing albums, inspired by letterboxd. <br>made with html/css, python, and a django database.</p>
+                <iframe width="560" height="515" src="https://www.youtube.com/embed/heenChG4ZoI" title="Cahill CS108 Final Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             </div>
             </div>
         `,
         "#graphicdesign": `

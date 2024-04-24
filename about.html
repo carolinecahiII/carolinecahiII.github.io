@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
    <head>
       <title>about me</title>
@@ -20,26 +20,44 @@
             <img id="chair" class="chair-about" src="images/chair.png" alt="chair">
          </div>
          <div class="column">
-         <h3>
-            <em class="blue">tl:dr;</em>
-            i'm a product designer, narrative creator, and interactive media creator. i'm a jack of all trades, and hope one day to be a master of at least <em>some.</em>
-         </h3>
-         <br>
-         <p>a lot of things on the internet, imporant things like government sites and informational graphics we need to 
-            understand, don't make any sense. <em><strong>why is that?</strong></em><br><br> i'm motivated by turning the 
-            frustration of battling bad UI into a data-based solution that makes people's lives easier, and the world a more 
-            user-friendly place.
-            <br><br>web design is more than fonts and color palettes; in the world we live in, making information readily 
-            available and understandable is crucial to media literacy, human empathy, and cross-cultural exchange. 
-            <br><br>
-            i feel most accomplished when i can use thoughtful design, good writing, and intuitive UI/UX to help people understand 
-            something they might have otherwise given up on.</p>
+            <h3>
+               <em class="blue">tl:dr;</em>
+               i'm a frontend developer and interactive digital media designer. i’m happiest when i can make something exciting and dynamic out of something boring, hard to use, or complicated.
+            </h3>
             <br>
-            <hr>
-            <p> my values are a huge part of what inspires me to do my best work. most recently, I worked in the brown university library as a <strong>senior library technologist.</strong> <br><br>
-                most of my work involved collaboration with <a class="blue" href="https://library.brown.edu/create/cds/projects/">amazing digital scholarship projects</a> and 
-                other interesting library initiatives, like the incredible oral history project <a class="blue" href="https://library.brown.edu/create/building-a-bridge-back-to-brown/timeline/">building a bridge back to brown project.</a>
-             </p>
+            <p>a lot of things on the internet, important things like government sites and informational graphics we need to 
+               understand, don't make any sense. <em><strong>that's annoying!</strong></em><br><br> i'm motivated by turning the 
+               frustration of battling bad ui into a data-based solution that makes people's lives easier, and the world a more 
+               user-friendly place. i also believe that strong development skills should include a healthy dose of creativity and fun (the website you’re reading right now is an example of that!).
+               <br><br>web development is more than fonts and color palettes; in the world we live in, making information readily 
+               available and understandable is crucial to media literacy, human empathy, and cross-cultural exchange. 
+               <br><br>
+               i feel most accomplished when i can use thoughtful development, intuitive design, and thoughtful collaboration to help people understand 
+               something they might have otherwise given up on.</p>
+               <br>
+               <hr>
+               <p>at trinity college dublin, i’m pursuing a master’s of science degree in interactive digital media. some things i’ve worked on during this time:
+                  <ul>
+                     <li>comprehensive full lifecycle web development, including:</li>
+                     <div style="padding-left: 40px;">
+                        <li>building requirements documents</li>
+                        <li>wireframing pages</li>
+                        <li>outlining and researching best ui/ux and accessibility processes</li>
+                        <li>social media integration plan</li>
+                    </div>
+                     <li>web development accessibility principles and how to apply them in a meaningful way</li>
+                     <li>interdisciplinary collaboration on projects with large scopes</li>
+                     <li>rigorous ui/ux and compliance strategy</li>
+                     <li>javascript development, specifically for games and web design</li>
+                     <li>visual computing and 3d graphics</li>
+                     <li>c++ development, applied particularly to sensor technologies</li>
+                  </ul>
+                  notable projects:
+                  <ul>
+                     <li>taproot: a data visualization project made with visual computing software</li>
+                     <li>mise: a photo-sharing site designed as an alternative to substack for food/chef writing</li>
+                  </ul>
+               </p>
              <br>
              <hr>
              <p>i also love playing (note: losing), talking about, and studying <strong>video games.</strong> like many of my generation, i've been hooked since my dad let me mess around on his copy of <em>skyrim</em> back in 2011.</p>
@@ -49,31 +67,31 @@
              <hr>
              <p>when i'm not sitting in front of a screen, i'm usually wrapped up in one of the following activities:</p>
              <ol>
-                <li>fighting caterpillars in my vegetable garden</li>
-                <li>propagating a houseplant despite not having room for any more vegetation in my apartment</li>
-                <li>listening to <a href="https://radiolab.org/">radiolab</a></li>
-                <li>planning a dnd campaign</li>
-                <li>working on the <a href="https://open.spotify.com/artist/2gEbbAsoh2aHjBx8QLAJO7?si=foGWSrNNTD6X3O1LRflwXg">next great american anti-folk record</a></li>
-             </ol>
+               <li>writing interactive narratives in twine, then using (trying to figure out) unity to make it a video game</li>
+               <li>designing posters for my apartment</li>
+               <li>listening to <a href="https://radiolab.org/">radiolab</a></li>
+               <li>planning a dnd campaign</li>
+               <li>working on the <a href="https://open.spotify.com/artist/2gebbasoh2ahjbx8qlajo7?si=fogwsrnntd6x3o1lrflwxg">next great american anti-folk record</a></li>
+            </ol>
              <br>
              <hr>
-             <p>when i'm not in grad school, i live in new england with my wonderful partner and our extremely grumpy tuxedo cat.</p>
+             <p>when i'm not in grad school, i live in new england with my wonderful partner and our extremely grumpy tuxedo cat (pictured).</p>
              <img class="frank" src="images/frank.png" alt="cat">
              <hr>
             </div>
             </div>
             <script>
                $(document).ready(function() {
-                   // Get current page URL
-                   var currentPage = window.location.pathname.split('/').pop();
+                   // get current page url
+                   var currentpage = window.location.pathname.split('/').pop();
    
-                   // Loop through topnavi links
+                   // loop through topnavi links
                    $('.topnavi a').each(function() {
-                       var linkPage = this.href.split('/').pop();
+                       var linkpage = this.href.split('/').pop();
    
-                       if (linkPage === currentPage) {
-                           // Add 'active' class to the parent li of the matching link
-                           $(this).parent('li').addClass('active');
+                       if (linkpage === currentpage) {
+                           // add 'active' class to the parent li of the matching link
+                           $(this).parent('li').addclass('active');
                        }
                    });
                });

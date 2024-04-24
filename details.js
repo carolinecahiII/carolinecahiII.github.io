@@ -70,15 +70,26 @@ function getProjectContent(projectId) {
              <p>digital foraging companion app with a focus on indigenous use and sustainable harvesting practices.</p>
              <br><a href="taproot.html">check it out here!</a>
              </div>
+             <div class="project-rectangle">
+             <h3>sketchify</h3>
+             <div id="sketch" style="width: 80%; margin-top: 5%;">
+             <video controls>
+            <source src="images/sketchify.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div>
+            <p>'sketchify' effect applied to videos using procedural generation with Processing.</p>
+             </div>
             </div>
         `,
         "#webdev": `
             <div class="project-grid">
             <div class="project-rectangle">
-                <h3>mise</h3>
+                <h3 id="mise">mise</h3>
                 <p style="text-align:left;">a blogging/writing platform specifically for food and cooking writing, developed as an alternative to substack for chefs. fullstack development, built using html/css and javascript with node.js an sql database.</p>
                 <img class="expandable-image" style="width: 80%; margin-top: 10%;" src="images/login.png"><br>
                 <img class="expandable-image" style="width: 80%; margin-top: 10%;" src="images/post.png">
+                <img class="expandable-image" style="width: 80%; margin-top: 10%;" src="images/browse.jpeg">
                 <img class="expandable-image" style="width: 80%; margin-top: 10%;" src="images/about.jpeg">
                 <br><br><br>
              </div>

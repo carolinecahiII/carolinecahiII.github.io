@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+   <head>
+      <title>taproot</title>
+      <link rel="stylesheet" type="text/css" href="style2.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+   <body>
+      <ul class="topnavi heavy-text">
+         <li class="page"><a href="index.html">     home    </a></li>
+         <li class="page"><a href="resume.html">    resume    </a></li>
+         <li class="page"><a href="about.html">    about    </a></li>
+         <li class="page"><a href="portfolio.html">    portfolio    </a></li>
+         <li class="page"><a href="contact.html">    contact    </a></li>
+     </ul>
+     <a href="index.html" class="back-button">back home!</a>
+     <div class="taproot-container">
+        <div class="taproot-left-column">
+            <h1><i>Taproot</i>: a digital foraging companion</h1>
+            <hr>
+            <h3>Concept</h3>
+            <p>Taproot is an interactive map where users can select their region and view a list, as well as 
+                3D manipulatable models of, foragable plantlife for both edible and medicinal use. <br><br>The central
+                 goal of Taproot is to reconnect individuals with the vegetation and fungi growing in their 
+                 backyard and decenter industrial food shopping and food waste.<br><br> Besides flora itself, the 
+                 tool will feature tips on sustainable harvesting, indigenous uses, and recipes. To better 
+                 suit the timeline and scope of this project, this iteration focuses on the American North
+                East. This project was inspired by the several concepts:
+            </p>
+            <ul>
+                <li><strong>Plant blindness:</strong> this is an <a hrer="https://en.wikipedia.org/wiki/Plant_blindness">‘informally proposed form of cognitive bias’</a> which essentially
+                     posits that modern humans tend to look at vegetation, however familiar,  as ‘tree, bush, 
+                     grass’ instead of more specific terms, for example, ‘sycamore, laurel, and yarrow’. 
+                </li>
+                <li><strong>Decolonial theory:</strong> Taproot aims to counteract the colonial idea of occupying previously well-stewarded land and neglecting to understand and nurture it, emphasizing indigenous American foraging processes.
+               </li>
+            </ul>
+            <br><br>
+            <h3>Interactive Map and Data Visualization</h3>
+            <p><strong>Map Interaction:</strong>Use the PeasyCam library in Processing to implement an interactive 3D textured map. Users can rotate, zoom in, and click on different regions to get more specific recommendations. When a region is selected, pull data from an array or JSON file containing information about the forageable items in that area, including their names, descriptions, images, and best foraging seasons.</p>
+            <p><strong>Season and Category Selection:</strong> Implement dropdown menus or sliders allowing users to filter forageable items by season (Spring, Summer, Fall, Winter) and category (Food, Medicinal, etc.). Update the displayed items dynamically based on the user's selection to show only relevant items. </p>
+            <br>
+             <h3>3D Modeling with Blender</h3>
+             <p><strong>Forageable Items Modeling:</strong> Model key forageable items in Blender to create detailed 3D representations. These models can be used within the AR feature or as interactive elements that users can explore in detail.</p>
+            <br><h3>Overall Theme of Connection & Storytelling via Data</h3>
+            <p>Taproot uses creative visualization techniques to present data about forageable items, such as interactive charts or maps that highlight the abundance of items in different regions and seasons.</p>
+            <p>In future iterations of this project, I plan to implement animations or transitions that visually represent the growth cycles of plants, their ecological relationships, or historical foraging trends, but that may be far beyond the scope of this project.</p>
+            </div>
+        <div class="taproot-right-column">
+            <video controls>
+                <source src="images/taproot.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+   </body>
+   </html>

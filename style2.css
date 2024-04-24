@@ -1,3 +1,101 @@
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Black.otf') format('opentype');
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Bold.otf') format('opentype');
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-BoldItalic.otf') format('opentype');
+    font-weight: bold; /* Bold */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Italic.otf') format('opentype');
+    font-weight: normal; /* Use normal or the appropriate weight if known */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Regular.otf') format('opentype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Thin.otf') format('opentype');
+    font-weight: 200; /* Light */
+    font-style: light;
+}
+@font-face {
+    font-family: 'Paradose';
+    src: url('fonts/paradose.ttf') format('opentype');
+    font-weight: normal; /* Adjust as necessary */
+    font-style: normal; }
+@font-face {
+    font-family: 'Raglot';
+    src: url('fonts/Raglot Demo.otf') format('opentype');
+    font-weight: normal; /* Adjust as necessary */
+    font-style: normal; /* Adjust if the font has a specific style */
+}
+
+/* For ZTChintzy Black */
+.black-text {
+    font-family: 'ZTChintzy';
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+/* For ZTChintzy Bold */
+.bold-text {
+    font-family: 'ZTChintzy';
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+/* For ZTChintzy Bold Italic */
+.bold-italic-text {
+    font-family: 'ZTChintzy';
+    font-weight: bold; /* Bold */
+    font-style: italic;
+}
+
+/* For ZTChintzy Italic */
+.italic-text {
+    font-family: 'ZTChintzy';
+    font-weight: normal; /* Assuming normal weight for Italic, adjust if needed */
+    font-style: italic;
+}
+.light-text{
+    font-family: 'ZTChintzy';
+    font-weight: normal; /* Assuming normal weight for Italic, adjust if needed */
+    font-style: light;
+}
+
+/* For ZTChintzy Light */
+.reg-text {
+    font-family: 'ZTChintzy';
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+.raglot {
+    font-family: 'Raglot', sans-serif; /* Fallback to sans-serif in case the custom font doesn't load */
+}
+.paradose {
+    font-family: 'Paradose', sans-serif; /* Fallback to sans-serif in case the custom font doesn't load */
+}
+
 /* Define okine Light */
 @font-face {
     font-family: 'okine';
@@ -51,7 +149,7 @@
 }
 
 body {
-	font-family: 'okine', Helvetica;
+	font-family: Helvetica;
 	background-color: #ffff;
 }
 .back-button {
@@ -179,6 +277,9 @@ hr {
     border: none;
     border-top: 4px dotted #6f6fff;
     padding:10px;
+  }
+  #bottom{
+    font-family: Arial, Helvetica, sans-serif;
   }
  
   /* a few aesthetic fixes I had as inline css, moved to classes */
@@ -339,4 +440,74 @@ hr {
         text-align: center;
     }
 
+}
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.8); /* Black with opacity */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto; /* 15% from the top and centered horizontally */
+    padding: 20px;
+    width: 80%; /* Responsive width */
+    max-width: 1200px; /* Maximum width */
+}
+
+.modal-image {
+    width: 100%; /* Full width of the modal content */
+    display: block; /* Ensures no extra space below the image */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #ccc;
+    text-decoration: none;
+}
+.taproot-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.taproot-left-column, .taproot-right-column {
+    flex: 1; /* Makes both columns take up equal space initially */
+    padding: 20px; /* Adds space inside the columns */
+}
+.taproot-right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video {
+    width: 100%; /* Makes the video responsive */
+    max-width: 600px; /* Limits the maximum width */
+    height: auto;
+}
+
+/* Responsive adjustments with a media query */
+@media (max-width: 800px) {
+    .taproot-container {
+        flex-direction: column; /* Stacks the flex items vertically on small screens */
+    }
+    .taproot-left-column, .taproot-right-column {
+        flex: 1 0 100%; /* Each column takes full width of the screen on small devices */
+    }
 }

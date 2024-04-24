@@ -1,3 +1,100 @@
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Black.otf') format('opentype');
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Bold.otf') format('opentype');
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-BoldItalic.otf') format('opentype');
+    font-weight: bold; /* Bold */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Italic.otf') format('opentype');
+    font-weight: normal; /* Use normal or the appropriate weight if known */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Regular.otf') format('opentype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ZTChintzy';
+    src: url('fonts/ZTChintzy-Thin.otf') format('opentype');
+    font-weight: 200; /* Light */
+    font-style: light;
+}
+@font-face {
+    font-family: 'Paradose';
+    src: url('fonts/paradose.ttf') format('opentype');
+    font-weight: normal; /* Adjust as necessary */
+    font-style: normal; }
+@font-face {
+    font-family: 'Raglot';
+    src: url('fonts/Raglot Demo.otf') format('opentype');
+    font-weight: normal; /* Adjust as necessary */
+    font-style: normal; /* Adjust if the font has a specific style */
+}
+
+/* For ZTChintzy Black */
+.black-text {
+    font-family: 'ZTChintzy';
+    font-weight: 900; /* Black */
+    font-style: normal;
+}
+
+/* For ZTChintzy Bold */
+.bold-text {
+    font-family: 'ZTChintzy';
+    font-weight: bold; /* Bold */
+    font-style: normal;
+}
+
+/* For ZTChintzy Bold Italic */
+.bold-italic-text {
+    font-family: 'ZTChintzy';
+    font-weight: bold; /* Bold */
+    font-style: italic;
+}
+
+/* For ZTChintzy Italic */
+.italic-text {
+    font-family: 'ZTChintzy';
+    font-weight: normal; /* Assuming normal weight for Italic, adjust if needed */
+    font-style: italic;
+}
+.light-text{
+    font-family: 'ZTChintzy';
+    font-weight: normal; /* Assuming normal weight for Italic, adjust if needed */
+    font-style: light;
+}
+
+/* For ZTChintzy Light */
+.reg-text {
+    font-family: 'ZTChintzy';
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+.raglot {
+    font-family: 'Raglot', sans-serif; /* Fallback to sans-serif in case the custom font doesn't load */
+}
+.paradose {
+    font-family: 'Paradose', sans-serif; /* Fallback to sans-serif in case the custom font doesn't load */
+}
 /* Define okine Light */
 @font-face {
     font-family: 'okine';
@@ -77,6 +174,7 @@ body {
     width: 100%;
     text-align: center;
     z-index: 1000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #header { top: 88%; }

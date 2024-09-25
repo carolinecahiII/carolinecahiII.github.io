@@ -91,7 +91,7 @@ h4{
 
 .title .row3 {
     position: absolute;
-    font-family: 'Milkman';
+    font-family: 'Milkman', Helvetica, sans-serif;
     top: 200px; /* Adjust this to move closer to the center */
     left: 50%;
     transform: translate(-50%, -50%); /* Move down to align with CV and About */

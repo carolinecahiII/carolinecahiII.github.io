@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --misty-mauve: #9da7ea;
+  --scarlet-ember: #ec5e52;
+  --sunlit-amber: #eebe55;
+  --twilight-indigo: #383154;
+  --forest-shadow: #1c423e;
+  --rosy-blush: #f4b6c3;
+  --minty-frost: #d7ffe9;
+
+  --background: 0 0% 100%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 10%;
+  --primary: 0 0% 10%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 0 0% 90%;
+  --radius: 0rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  font-weight: 300; /* Light weight for body text */
+  line-height: 1.7;
+}
+
+.nav-item {
+  @apply w-full py-4 px-6 text-sm tracking-wide text-left transition-colors flex items-center gap-3;
+}
+
+.nav-item:hover {
+  @apply brightness-95;
+}
+
+.symbol {
+  @apply text-lg;
+}
+
+/* Image optimization */
+.project-image {
+  @apply transition-opacity duration-300;
+}
+
+.project-image[data-loaded="false"] {
+  @apply opacity-0;
+}
+
+.project-image[data-loaded="true"] {
+  @apply opacity-100;
+}
+
+/* Lazy loading skeleton */
+.image-skeleton {
+  @apply bg-gray-200 animate-pulse;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
